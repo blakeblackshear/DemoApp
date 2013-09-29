@@ -10,6 +10,7 @@ namespace DemoApp.Service.Tests
     [TestFixture]
     public class BasicTests
     {
+        [Test]
         public void A_equal_B()
         {
             int a = 1;
