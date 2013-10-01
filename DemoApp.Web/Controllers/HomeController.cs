@@ -12,6 +12,19 @@ namespace DemoApp.Web.Controllers
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
+            ViewBag.BuildVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString(4);
+            ViewBag.ServerName = System.Environment.MachineName;
+
+            // read connection string
+            System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/");
+            if (rootWebConfig.ConnectionStrings.ConnectionStrings.Count > 0)
+            {
+                var connString = rootWebConfig.ConnectionStrings.ConnectionStrings["DefaultConnection"];
+                if (connString != null)
+                {
+                    ViewBag.ConnectionString = connString.ConnectionString;
+                }
+            }
             return View();
         }
 
