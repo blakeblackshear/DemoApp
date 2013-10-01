@@ -16,14 +16,10 @@ namespace DemoApp.Web.Controllers
             ViewBag.ServerName = System.Environment.MachineName;
 
             // read connection string
-            System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/");
-            if (rootWebConfig.ConnectionStrings.ConnectionStrings.Count > 0)
+            var connString = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"];
+            if (connString != null)
             {
-                var connString = rootWebConfig.ConnectionStrings.ConnectionStrings["DefaultConnection"];
-                if (connString != null)
-                {
-                    ViewBag.ConnectionString = connString.ConnectionString;
-                }
+                ViewBag.ConnectionString = connString.ConnectionString;
             }
             return View();
         }
