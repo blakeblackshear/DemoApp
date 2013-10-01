@@ -1,31 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using Microsoft.AspNet.Membership.OpenAuth;
+using System.Text;
+using Microsoft.Web.WebPages.OAuth;
+using DemoApp.Web.Models;
 
 namespace DemoApp.Web
 {
-    internal static class AuthConfig
+    public static class AuthConfig
     {
-        public static void RegisterOpenAuth()
+        public static void RegisterAuth()
         {
-            // See http://go.microsoft.com/fwlink/?LinkId=252803 for details on setting up this ASP.NET
-            // application to support logging in via external services.
+            // To let users of this site log in using their accounts from other sites such as Microsoft, Facebook, and Twitter,
+            // you must update this site. For more information visit http://go.microsoft.com/fwlink/?LinkID=252166
 
-            //OpenAuth.AuthenticationClients.AddTwitter(
-            //    consumerKey: "your Twitter consumer key",
-            //    consumerSecret: "your Twitter consumer secret");
+            //OAuthWebSecurity.RegisterMicrosoftClient(
+            //    clientId: "",
+            //    clientSecret: "");
 
-            //OpenAuth.AuthenticationClients.AddFacebook(
-            //    appId: "your Facebook app id",
-            //    appSecret: "your Facebook app secret");
+            //OAuthWebSecurity.RegisterTwitterClient(
+            //    consumerKey: "",
+            //    consumerSecret: "");
 
-            //OpenAuth.AuthenticationClients.AddMicrosoft(
-            //    clientId: "your Microsoft account client id",
-            //    clientSecret: "your Microsoft account client secret");
+            //OAuthWebSecurity.RegisterFacebookClient(
+            //    appId: "",
+            //    appSecret: "");
 
-            //OpenAuth.AuthenticationClients.AddGoogle();
+            //OAuthWebSecurity.RegisterGoogleClient();
         }
     }
 }
