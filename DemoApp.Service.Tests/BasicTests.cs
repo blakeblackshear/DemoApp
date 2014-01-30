@@ -17,5 +17,13 @@ namespace DemoApp.Service.Tests
             int b = 1;
             Assert.AreEqual(a, b);
         }
+        
+        [Test]
+        public void Broken_Test()
+        {
+            int a = 1;
+            int b = 2;
+            Assert.AreEqual(a, b);
+        }        
     }
 }
