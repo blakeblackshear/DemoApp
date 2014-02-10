@@ -1,0 +1,1 @@
+Write-Host "This is a message from before-deploy script"
