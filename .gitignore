@@ -32,8 +32,6 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 [Bb]uild[Ll]og.*
 *.[Pp]ublish.xml
-Appveyor.Server/Logs/appveyor_log.txt
 packages/
 [Bb]uild/
 [Ll]ogs/
-PowerShell/libs/[Aa]ppveyor*.*
